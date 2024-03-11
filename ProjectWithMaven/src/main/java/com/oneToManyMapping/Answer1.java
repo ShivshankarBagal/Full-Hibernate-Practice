@@ -1,29 +1,33 @@
-package com.mapping;
+package com.oneToManyMapping;
+
+
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
+import org.hibernate.annotations.ManyToAny;
+
 @Entity
-public class Answer {
+public class Answer1 {
 	
 	@Id
 	private int ansId;
 	private String answer;
 	
-	@OneToOne(mappedBy = "answer")
-	@JoinColumn(name = "question_id")
-	private Question question;
+	@ManyToOne
+	private Question1 question;
 	
 	
 	 
-	public Question getQuestion() {
+	public Question1 getQuestion1() {
 		return question;
 	}
 
-	public void setQuestion(Question question) {
-		this.question = question;
+	public void setQuestion1(Question1 Question1) {
+		this.question = Question1;
 	}
 
 	public int getAnsId() {
@@ -47,14 +51,14 @@ public class Answer {
 
 	
 
-	public Answer(int ansId, String answer, Question question) { //
+	public Answer1(int ansId, String answer, Question1 question) { //
 		super();
 		this.ansId = ansId;
 		this.answer = answer;
 		this.question = question;
 	}
 
-	public Answer() {
+	public Answer1() {
 		super();
 		// TODO Auto-generated constructor stub
 	}

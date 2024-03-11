@@ -14,7 +14,8 @@ public class Question {
 	private int questionId;
 	private String question;
 	
-	@OneToOne
+	@OneToOne 
+	@JoinColumn(name = "answer_id")
     private Answer answer;
 
 	public Question(int questionId, String question, Answer answer) {
