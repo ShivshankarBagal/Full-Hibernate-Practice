@@ -11,13 +11,18 @@
         <property name="hibernate.hbm2ddl.auto">create</property>
         <property name="hibernate.show_sql">true</property>
     	
-    	<mapping class="com.tut.Student"/>
-    	<mapping class="com.tut.Address"/>
+    	<!-- <mapping class="com.tut.Student"/>
+    	<mapping class="com.tut.Address"/> -->
     	<mapping class="com.tut.FetchDemo"/>
     	<mapping class="com.tut.EmDemo"/>
     	<mapping class="com.tut.Certificate"/>
+    	<mapping class="com.mapping.Question"/>
+    	<mapping class="com.mapping.Answer"/>
+    	
     </session-factory>
 </hibernate-configuration>
+
+<!--  -->
 
 
 <!--   <?xml version="1.0" encoding="UTF-8"?>
