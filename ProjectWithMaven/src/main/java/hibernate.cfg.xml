@@ -8,23 +8,30 @@
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password">root</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
-        <property name="hibernate.hbm2ddl.auto">create</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
         <property name="hibernate.show_sql">true</property>
     	
     	<!-- <mapping class="com.tut.Student"/>
     	<mapping class="com.tut.Address"/> -->
     	
+    	<!-- 
     	<mapping class="com.tut.FetchDemo"/>
     	<mapping class="com.tut.EmDemo"/>
     	<mapping class="com.tut.Certificate"/>
+    	 -->
     	
     <!--	<mapping class="com.mapping.Question"/>
     	<mapping class="com.mapping.Answer"/>
+    	<mapping class="com.mapping.MappingMain"/>
     	
     	-->
+    	<!-- 
     	<mapping class="com.oneToManyMapping.Answer1"/>
     	<mapping class="com.oneToManyMapping.Question1"/>
+    	 -->
     	
+    	<mapping class="com.ManyToMany.Employee"/>
+    	<mapping class="com.ManyToMany.Project"/>
     </session-factory>
 </hibernate-configuration>
 
