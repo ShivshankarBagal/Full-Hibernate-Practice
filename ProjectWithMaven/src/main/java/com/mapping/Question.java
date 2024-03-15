@@ -1,5 +1,6 @@
 package com.mapping;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -14,7 +15,7 @@ public class Question {
 	private int questionId;
 	private String question;
 	
-	@OneToOne 
+	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "answer_id")
     private Answer answer;
 

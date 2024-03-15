@@ -44,6 +44,17 @@ public class MappingDemo {
 	
 		q2.setAnswer(ans2);
 		
+		
+		Question q3=new Question();
+		q3.setQuestionId(1414);
+		q3.setQuestion("What is C#?");
+		
+		Answer ans3=new Answer();
+		ans3.setAnsId(300);
+		ans3.setAnswer("C# is computer language and use FW is .NET");
+		ans3.setQuestion(q3);
+		q3.setAnswer(ans3);
+		
 		Session session=factory.openSession();
 		Transaction tx=session.beginTransaction();
 		
@@ -51,8 +62,11 @@ public class MappingDemo {
 		
 		session.save(q1);
 		session.save(q2);
+		session.save(q3);
 		session.save(ans2);
 		session.save(ans1);
+		session.save(ans3);
+		
 		tx.commit();
 		
 		
