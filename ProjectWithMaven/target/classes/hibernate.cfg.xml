@@ -25,6 +25,8 @@
   		<mapping class="com.mapping.Question"/>
     	<mapping class="com.mapping.Answer"/>
     	
+    	<mapping  resource="com/mapUsingXML/Customer.hbm.xml"/>
+    	
     	
     	
     	<!-- 
